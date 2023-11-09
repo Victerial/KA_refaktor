@@ -1,0 +1,109 @@
+body{
+    background-color: #AC9362;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0;
+    
+}
+button {
+    background-color: #555; 
+    color: #fff; 
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #777; 
+}
+
+body.night-mode {
+    background-color: #222; 
+    color: #fff; 
+}
+
+h1.night-mode{
+    background-color: #222;
+    color: #fff;
+}
+
+button.night-mode {
+    background-color: #555; 
+    color: #fff; 
+}
+
+button.night-mode:hover {
+    background-color: #777; 
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.time, .day {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.days {
+    display: flex;
+}
+
+.day {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.addHourButton {
+    margin-top: 10px;
+}
+
+.days .day {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.hour {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.hour:hover {
+    background-color: #f9f9f9;
+}
+
+.hour.active {
+    background-color: #f0f0f0;
+}
+
+.hour input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+}
+
+.hour.active input {
+    background-color: #f0f0f0;
+    outline: none;
+}
