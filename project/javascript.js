@@ -1,4 +1,3 @@
-// Változók inicializálása
 let scheduleData = {
     days: [
       { name: 'Hétfő', hours: [] },
@@ -9,7 +8,6 @@ let scheduleData = {
     ]
   };
   
-  // Lokális tárolóban tárolt adatok ellenőrzése
   function localStorageEllenorzes() {
     const storedData = localStorage.getItem('scheduleData');
     if (storedData) {
@@ -17,32 +15,27 @@ let scheduleData = {
     }
   }
   
-  // Adat hozzáadása a változóhoz
   function adatHozzaadas(dayIndex, hourText) {
     scheduleData.days[dayIndex].hours.push(hourText);
     tartalomRendereles();
     blackWhiteModMentesALocalStoragebe();
   }
   
-  // Adat eltávolítása a változóból
   function adatTorle(dayIndex, hourIndex) {
     scheduleData.days[dayIndex].hours.splice(hourIndex, 1);
     tartalomRendereles();
     blackWhiteModMentesALocalStoragebe();
   }
   
-  // Sötét és világos mód váltása
   function blackWhiteModValtas() {
     document.body.classList.toggle('night-mode');
   }
   
-  // Sötét és világos mód beállítása a lokális tárolóban
   function blackWhiteModMentesALocalStoragebe() {
     const nightModeEnabled = document.body.classList.contains('night-mode');
     localStorage.setItem('nightModeEnabled', nightModeEnabled);
   }
   
-  // Sötét és világos mód beállítása a lokális tárolóból
   function blackWhiteModBeallitasALocalStoragebol() {
     const nightModeEnabled = localStorage.getItem('nightModeEnabled') === 'true';
     if (nightModeEnabled) {
@@ -50,7 +43,6 @@ let scheduleData = {
     }
   }
   
-  // Lokális tároló inicializálása, ha nincs adat
   function localStorageInicializalas() {
     const storedData = localStorage.getItem('scheduleData');
     if (!storedData) {
@@ -58,7 +50,6 @@ let scheduleData = {
     }
   }
   
-  // Megjelenítés generálása
   function tartalomRendereles() {
     const daysContainer = document.querySelector('.days');
     daysContainer.innerHTML = '';
@@ -90,7 +81,6 @@ let scheduleData = {
     });
   }
   
-  // Események kezelése
   document.addEventListener('DOMContentLoaded', function() {
     localStorageEllenorzes();
     localStorageInicializalas();
